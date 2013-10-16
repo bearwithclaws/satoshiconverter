@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+  <meta charset="utf-8">
+  <title>Satoshi Converter</title>
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/angular.min.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="SatoshiCtrl">
+  <input ng-model='fromAmount' ng-change="changeFrom()">
+  <select ng-model="fromUnit" ng-change="changeFrom()">
+    <option value=1>BTC</option>
+    <option value=100>cBTC</option>
+    <option value=1000>mBTC</option>
+    <option value=1000000>μBTC</option>
+    <option value=100000000>satoshi</option>
+  </select>
+  =
+  <span>{{ toAmount }}</span>
+  <select ng-model="toUnit" ng-change="changeFrom()">
+    <option value=1>BTC</option>
+    <option value=0.01>cBTC</option>
+    <option value=0.001>mBTC</option>
+    <option value=0.000001>μBTC</option>
+    <option value=0.00000001>satoshi</option>
+  </select>
+
+</body>
+</html>
